@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:somnio_code_challenge/presentation/widgets/widgets.dart';
 import '../../theme/responsive.dart';
 import '../../theme/text_styles.dart';
 import '../../utils/strings.dart';
@@ -25,15 +25,11 @@ class Newsectionwidget extends StatelessWidget {
             style: TextStyles.postContent,
           ),
           Container(
-            padding: EdgeInsets.only(
-                top: Responsive.responsiveHeight(
-                    MediaQuery.of(context).size.height, 0.3)),
-            alignment: Alignment.center,
-            child: Text(
-              StringsFormat.initWithUppercase(Strings.comingSoon),
-              style: TextStyles.comingSoon,
-            ),
-          ),
+              padding: EdgeInsets.only(
+                  top: Responsive.responsiveHeight(
+                      MediaQuery.of(context).size.height, 0.3)),
+              alignment: Alignment.center,
+              child: PostMessageLabelWidget(message: Strings.comingSoon)),
         ]));
   }
 }

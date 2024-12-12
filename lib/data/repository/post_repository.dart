@@ -6,11 +6,18 @@ import '../services/url_paths.dart';
 class PostRepository implements IPostRepository {
   @override
   Future<List> getPosts() async {
-    final response = await httpClient.get(UrlPaths.getPosts);
-    List posts = await response.data.map((post) {
-      return Post.fromJson(post);
-    }).toList();
-    return posts;
+    try {
+      final response = await httpClient.get(UrlPaths.getPosts);
+      List posts = [];
+      if (response.data.isNotEmpty) {
+        posts = await response.data.map((post) {
+          return Post.fromJson(post);
+        }).toList();
+      }
+      return posts;
+    } catch (error) {
+      return [];
+    }
   }
 
   final HttpClient httpClient = HttpClient();

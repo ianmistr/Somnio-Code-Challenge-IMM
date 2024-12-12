@@ -13,3 +13,4 @@ export './tab_bar_widget.dart';
 export './posts_widgets/post_outlined_container_widget.dart';
 export './posts_widgets/post_card_widget.dart';
 export './posts_widgets/post_grid_widget.dart';
+export './posts_widgets/post_message_label_widget.dart';
