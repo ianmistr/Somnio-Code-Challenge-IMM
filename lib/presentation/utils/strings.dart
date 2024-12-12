@@ -6,4 +6,5 @@ abstract class Strings {
   static String get community => "community";
   static String get readMore => "read more";
   static String get comingSoon => "coming soon";
+  static String get noData => "no data to show yet";
 }

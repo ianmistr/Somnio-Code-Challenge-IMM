@@ -11,6 +11,6 @@ abstract class TextStyles {
       TextStyle(color: ColorPalette.lightTexts, fontSize: 14);
   static TextStyle get readMoreText => TextStyle(
       color: ColorPalette.secondary, fontWeight: FontWeight.bold, fontSize: 16);
-  static TextStyle get comingSoon => TextStyle(
+  static TextStyle get messageLabel => TextStyle(
       color: ColorPalette.texts, fontWeight: FontWeight.bold, fontSize: 18);
 }

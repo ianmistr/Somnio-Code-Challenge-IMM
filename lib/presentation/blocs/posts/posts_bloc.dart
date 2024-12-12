@@ -7,6 +7,8 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
     on<GetPosts>((event, emit) async {
       emit(PostsLoading());
       List response = await iPostRepository.getPosts();
+
+      if (response.isEmpty) emit(PostsError());
       emit(PostsLoaded(posts: response));
     });
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../blocs/blocs.dart';
 import '../../theme/responsive.dart';
+import '../../utils/strings.dart';
 import '../widgets.dart';
 
 class PostsListWidget extends StatelessWidget {
@@ -12,6 +13,14 @@ class PostsListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<PostsBloc, PostsState>(builder: (context, state) {
+      if (state is PostsError) {
+        return Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.only(
+                top: Responsive.responsiveHeight(
+                    MediaQuery.of(context).size.height, 0.3)),
+            child: PostMessageLabelWidget(message: Strings.noData));
+      }
       if (state is PostsLoaded) {
         return Expanded(
             child: Responsive.isSmartphone(

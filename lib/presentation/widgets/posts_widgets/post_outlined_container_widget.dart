@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:somnio_code_challenge/presentation/theme/color_palette.dart';
-
 import '../../theme/responsive.dart';
 
 class PostOutlinedContainerWidget extends StatelessWidget {
