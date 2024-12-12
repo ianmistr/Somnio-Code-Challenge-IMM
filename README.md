@@ -1,7 +1,9 @@
-# somnio_code_challenge
+# Somnio Code Challenge
 
 By Ian Micael Mistrorigo
 
-## Getting Started
+## Info
+
+App for mobile platforms, specially developed and tested in Android devices.
 
 
